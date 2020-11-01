@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Client Id/Secret Spotify
+util/spotify_client.txt
