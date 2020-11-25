@@ -131,3 +131,5 @@ dmypy.json
 # Client Id/Secret Spotify
 util/spotify_client.txt
 util/.*
+notebooks/runs
+
