@@ -75,7 +75,8 @@ def get_features(artist, sp, features):
             if feats in audio_features:
                 d[feats] = audio_features[feats]
     d['popularity'] = artist._pop
-    return d
+    return 
+
 
 def get_recommendations(artist, sp, lim = 1):
     # Do forward pass on model with artist
