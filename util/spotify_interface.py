@@ -20,12 +20,14 @@ class Artist:
     '''
     Class for ease of handling of JSON objects 
     '''
-    def __init__(self, _id,name, genres, track_id, track_name):
+    def __init__(self, _id,name, genres, track_id, track_name, pop):
         self._id = _id
         self.name = name
         self._genres = genres
         self._track_id = track_id
         self._track_name = track_name
+        self._pop = pop
+        
 
 class ArtistCollection:
     '''
@@ -60,9 +62,20 @@ def get_artist(artists, sp):
     for a in artists:
         res = sp.search(q=a, type='artist')['artists']['items'][0]
         track = sp.search(q=a, type='track')['tracks']['items'][0]
-        temp = Artist(res['id'], res['name'], res['genres'], track['id'], track['name'])
+        temp = Artist(res['id'], res['name'], res['genres'], track['id'], track['name'], track['popularity'])
         artist.append(temp)
     return artist
+
+def get_features(artist, sp, features):
+    d = dict()
+    audio_features = sp.audio_features(artist._track_id)[0]
+    
+    for feats in features:
+        if feats not in d.keys():
+            if feats in audio_features:
+                d[feats] = audio_features[feats]
+    d['popularity'] = artist._pop
+    return d
 
 def get_recommendations(artist, sp, lim = 1):
     # Do forward pass on model with artist
