@@ -69,25 +69,23 @@ def get_artist(artists, sp):
 def get_features(artist, sp, features):
     d = dict()
     audio_features = sp.audio_features(artist._track_id)[0]
-    
     for feats in features:
         if feats not in d.keys():
             if feats in audio_features:
                 d[feats] = audio_features[feats]
     d['popularity'] = artist._pop
-    return 
+    return d
 
 
-def get_recommendations(artist, sp, lim = 1):
-    # Do forward pass on model with artist
-    list_of_artists = ['Drake', 'The Weeknd']  # Temp prediction
-    recs_per_artist = lim//len(list_of_artists)
+def get_recommendations(artists, sp, lim = 1):
+  
+    list_of_artists = artists
     pred_artist_col = ArtistCollection(get_artist(list_of_artists, sp))
     
     recommendations = []
-
     recommendations.append(sp.recommendations(\
                        seed_artists=pred_artist_col.seed_artists, \
                        seed_genres=pred_artist_col.seed_genres[:1], \
                        seed_tracks=pred_artist_col.seed_tracks, limit=lim))
+    
     return recommendations
