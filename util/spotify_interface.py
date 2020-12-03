@@ -6,6 +6,20 @@ import requests
 
 
 def get_spotify_token(username, scope, redirect_url, client_id, client_secret):
+    '''
+    Returns the token from Spotify to perform various queries
+    
+    username: Username - str
+    scope: Scope - str
+    redirect_url: Localhost for now - str
+    client_id: Client ID - str
+    client_secret: Client Secret - str
+    '''
+    assert isinstance(username, str), "Username must be string"
+    assert isinstance(scope, str), "Scope must be string"
+    assert isinstance(client_id, str), "client id must be string"
+    assert isinstance(client_secret, str), "client secret must be string"
+    
     token = util.prompt_for_user_token(username, scope, client_id,client_secret,redirect_url)
 
     if token:
@@ -14,6 +28,7 @@ def get_spotify_token(username, scope, redirect_url, client_id, client_secret):
     else:
         print("Can't get token for", username)
     return sp
+        
         
         
 class Artist:
@@ -54,10 +69,20 @@ class ArtistCollection:
             temp_tracks.append(a._track_id)
         return temp_tracks
 
+    
 def get_artist(artists, sp):
     '''
     Returns list of Artist class objects for ease of use
+    
+    artists: List of artists - List
+    sp: Spotify token - str
     '''
+    assert isinstance(artists, list), "Artists must be a list"
+    for i in artists:
+        assert isinstance(i, str), "Each artist must be a string"
+    
+    assert isinstance(sp, str), "Token should be string"
+    
     artist = []
     for a in artists:
         res = sp.search(q=a, type='artist')['artists']['items'][0]
@@ -66,7 +91,23 @@ def get_artist(artists, sp):
         artist.append(temp)
     return artist
 
+
 def get_features(artist, sp, features):
+    '''
+    Returns a dictionary of features features that is used in KNN model
+    
+    artist: Artist for which features are needed - str
+    sp: Spotify Token - str
+    features: List of features to return - List
+    '''
+    assert isinstance(artist, str), "features must be a string"
+    assert isinstance(features, list), "features must be a list"
+    for i in features:
+        assert isinstance(i, str), "Each feature must be a string"
+    
+    assert isinstance(sp, str), "Token should be string"
+    
+    
     d = dict()
     audio_features = sp.audio_features(artist._track_id)[0]
     for feats in features:
@@ -78,7 +119,22 @@ def get_features(artist, sp, features):
 
 
 def get_recommendations(artists, sp, lim = 1):
-  
+    '''
+    Returns a list of recommendations based on model generated artists
+    
+    artists: KNN predicted artists - list 
+    sp: Spotify Token - str
+    lim: Number of recommendations to return - int
+    '''
+    
+    assert isinstance(artists, list), "artists should be a list"
+    assert isinstance(lim, int), "lim should be a int"
+    for i in artists:
+        assert isinstance(i, str), "Each artist should be a string"
+    
+    
+
+    
     list_of_artists = artists
     pred_artist_col = ArtistCollection(get_artist(list_of_artists, sp))
     
