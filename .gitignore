@@ -132,5 +132,4 @@ dmypy.json
 util/spotify_client.txt
 util/.*
 notebooks/runs
-notebooks/.cache-Arth
 
