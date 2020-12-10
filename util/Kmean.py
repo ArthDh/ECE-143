@@ -16,6 +16,18 @@ import joblib
 import plotly.graph_objects as go
 
 def FeaturePlot(features,genres,name,color):
+    '''
+    Show the average features of data in specified genres in a polar plot
+    features: the original features 
+    genres: the list of predicted genres that we want to show their features
+    name: name that we believe can best describe the predicted genres
+    color: the color of the plot
+    '''
+    assert(isinstance(features,pd.DataFrame))
+    assert(isinstance(genres,list))
+    assert(isinstance(name,str))
+    assert(isinstance(color,str))
+    
     flag = features['predicted_genres'] == '0'
     for i in genres:
         flag = flag | (features['predicted_genres'] == i)
@@ -46,6 +58,13 @@ def FeaturePlot(features,genres,name,color):
     fig.show()
 
 def Kmean():
+    '''
+    1. Clean the data
+    2. Plot the sse(sum of squared error) vs number of means in K-mean
+    3. Using K-mean with k = 10 to do data clustering
+    4. Save the data with predicted genres and artists as index that can be used in the embedding projector
+    5. Show the average features of some specified genres in polar plot
+    '''
     path = '../data/df_cleaned__by_artist.csv'
     df = pd.read_csv(path)
     # Data cleaning
