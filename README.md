@@ -1,10 +1,22 @@
 # ECE-143
 
-ECE143 Group 20: MR. HyPE: Music Recommendation based on Hyper-dimensional Python Embedding
+ECE143 Group 20: 
+
+MR. HyPE: Music Recommendation based on Hyper-dimensional Python Embedding
 
 ## Installation
 
 Requires python 3.3+
+
+Some main third-party modules:
+
+pandas 1.1.4
+
+sklearn 0.0
+
+plotly 4.13.0
+
+spotipy 2.16.1
 
 Clone the repository using
 ```
@@ -32,15 +44,15 @@ deactivate
 
 ## Usage
 
-All the data we used and generated are stored in ./data folder, and the clustering model we generated are stored in ./model folder.
+All the data we used and generated are stored in [data](https://github.com/ArthDh/ECE-143/tree/main/data) folder, and the clustering model we generated are stored in [model](https://github.com/ArthDh/ECE-143/tree/main/model) folder.
 
 ### Data Visualization
 
-Visualizations of the correlation between raw features from dataset are presented in final notebook in ./notebook folder.
+Visualizations of the correlation between raw features from dataset are presented in final notebook in [notebooks](https://github.com/ArthDh/ECE-143/tree/main/notebooks) folder.
 
 ### Clustering
 
-We used K-mean for clustering and all visualizations regarding K-mean are also showed in final notebook. The original data used for hyper dimensional visualization are stoed in ./data folder, named df_cleaned.tsv and df_cleaned_genre_10.tsv.
+We used K-mean for clustering and all visualizations regarding K-mean are also showed in final notebook. The original data used for hyper dimensional visualization are stoed in [data](https://github.com/ArthDh/ECE-143/tree/main/data) folder, named df_cleaned.tsv and df_cleaned_genre_10.tsv.
 
 ### Hyper Dimensional Visualization
 
