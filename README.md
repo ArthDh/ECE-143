@@ -59,8 +59,8 @@ UMAP
 
 ![UMAP](https://github.com/ArthDh/ECE-143/blob/main/images/UMAP.gif)
 
-In order to see the 3D visualization of the dataset with predicted genres and artist names as index, use the following link:
-https://projector.tensorflow.org/?config=https://gist.githubusercontent.com/ArthDh/804b7297af76e5d0e626c8c01af2d158/raw/0d0c110e2ca731df7a63dcc7e8e0370d9dd29dd0/projector_config.json
+In order to see the 3D visualization of the dataset with predicted genres and artist names as index, use the following link:<br>
+[Embedding Visualizer](https://projector.tensorflow.org/?config=https://gist.githubusercontent.com/ArthDh/804b7297af76e5d0e626c8c01af2d158/raw/0d0c110e2ca731df7a63dcc7e8e0370d9dd29dd0/projector_config.json)
 
 ### Artist Recommendation
 
