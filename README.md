@@ -1,4 +1,4 @@
-# MR. HyPE: Music Recommendation based on Hyper-dimensional Python Embedding
+# MR. HyPE: Music Recommendation <br> based on Hyper-dimensional Python Embedding
 
 ECE143 Group 20
 
