@@ -43,7 +43,7 @@ All the data we used and generated are stored in [data](https://github.com/ArthD
 ### Data Visualization
 
 Visualizations of the correlation between raw features from dataset are presented in final notebook in [notebooks](https://github.com/ArthDh/ECE-143/tree/main/notebooks) folder.<br>
-For a better viewing experience and interactibility view notebook here [nbviewer](https://nbviewer.jupyter.org/github/ArthDh/ECE-143/blob/dev/notebooks/Final_Notebook_updated.ipynb)
+For a better viewing experience and interactibility view notebook here [nbviewer](https://nbviewer.jupyter.org/github/ArthDh/ECE-143/blob/main/notebooks/Final_Notebook_updated.ipynb)
 
 ### Clustering
 
