@@ -2,7 +2,7 @@
 
 ECE143 Group 20: MR. HyPE: Music Recommendation based on Hyper-dimensional Python Embedding
 
-##Installation
+## Installation
 
 Requires python 3.3+
 
@@ -30,3 +30,6 @@ Deactivate when done making changes
 deactivate
 ```
 
+## Usage
+
+### 
