@@ -4,6 +4,10 @@ ECE143 Group 20
 
 ## Installation
 
+ECE143 Group 20: MR. HyPE: Music Recommendation based on Hyper-dimensional Python Embedding
+
+## Installation
+
 Requires python 3.3+
 
 Some main third-party modules:
@@ -42,6 +46,7 @@ deactivate
 
 ## Usage
 
+=======
 All the data we used and generated are stored in [data](https://github.com/ArthDh/ECE-143/tree/main/data) folder, and the clustering model we generated are stored in [model](https://github.com/ArthDh/ECE-143/tree/main/model) folder.
 
 ### Data Visualization
