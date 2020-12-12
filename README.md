@@ -4,10 +4,6 @@ ECE143 Group 20
 
 ## Installation
 
-ECE143 Group 20: MR. HyPE: Music Recommendation based on Hyper-dimensional Python Embedding
-
-## Installation
-
 Requires python 3.3+
 
 Some main third-party modules:
