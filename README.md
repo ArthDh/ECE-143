@@ -11,14 +11,10 @@ ECE143 Group 20: MR. HyPE: Music Recommendation based on Hyper-dimensional Pytho
 Requires python 3.3+
 
 Some main third-party modules:
-
-pandas 1.1.4
-
-sklearn 0.0
-
-plotly 4.13.0
-
-spotipy 2.16.1
+- pandas 1.1.4
+- sklearn 0.0
+- plotly 4.13.0
+- spotipy 2.16.1
 
 Clone the repository using
 ```
@@ -46,12 +42,12 @@ deactivate
 
 ## Usage
 
-=======
 All the data we used and generated are stored in [data](https://github.com/ArthDh/ECE-143/tree/main/data) folder, and the clustering model we generated are stored in [model](https://github.com/ArthDh/ECE-143/tree/main/model) folder.
 
 ### Data Visualization
 
-Visualizations of the correlation between raw features from dataset are presented in final notebook in [notebooks](https://github.com/ArthDh/ECE-143/tree/main/notebooks) folder.
+Visualizations of the correlation between raw features from dataset are presented in final notebook in [notebooks](https://github.com/ArthDh/ECE-143/tree/main/notebooks) folder.<br>
+For a better viewing experience and interactibility view notebook here [nbviewer](https://nbviewer.jupyter.org/github/ArthDh/ECE-143/blob/dev/notebooks/Final_Notebook_updated.ipynb)
 
 ### Clustering
 
